@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation">
+  <meta name="description" content="CUSP is a stack-agnostic runtime hazard monitor for off-road navigation. It learns the human-perceived onset of danger from intervention-terminated logs with a discrete-time survival objective and turns the predicted onset risk into alarms with a one-sided CUSUM under a per-site false-alarm budget.">
+  <meta name="keywords" content="off-road navigation, runtime monitoring, hazard detection, survival analysis, CUSUM, learning from interventions, robotics, field robotics">
+  <meta name="author" content="Inuk Kang, Seung-Woo Seo">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook  (replace the URL with the final GitHub Pages URL) -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CUSP">
+  <meta property="og:title" content="CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation">
+  <meta property="og:description" content="A stack-agnostic runtime hazard monitor that learns the human-perceived onset of danger from intervention-terminated logs and raises CUSUM-governed alarms. 85 of 142 events detected at five unseen sites vs. 26 for the best of nine baselines.">
+  <meta property="og:url" content="https://USERNAME.github.io/cusp-project/">
+  <meta property="og:image" content="https://USERNAME.github.io/cusp-project/static/images/social_preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="CUSP - Research Preview">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation">
+  <meta name="twitter:description" content="A stack-agnostic runtime hazard monitor that learns the human-perceived onset of danger from intervention-terminated logs and raises CUSUM-governed alarms.">
+  <meta name="twitter:image" content="https://USERNAME.github.io/cusp-project/static/images/social_preview.jpg">
+
+  <!-- Academic -->
+  <meta name="citation_title" content="CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation">
+  <meta name="citation_author" content="Kang, Inuk">
+  <meta name="citation_author" content="Seo, Seung-Woo">
+  <meta name="citation_publication_date" content="2026">
+
+  <meta name="theme-color" content="#2563eb">
+  <title>CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="static/js/index.js"></script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation",
+    "description": "A stack-agnostic runtime hazard monitor for off-road navigation that learns the human-perceived onset of danger from intervention-terminated logs with a discrete-time survival objective and raises CUSUM-governed alarms under a per-site false-alarm budget.",
+    "author": [
+      {"@type": "Person", "name": "Inuk Kang"},
+      {"@type": "Person", "name": "Seung-Woo Seo"}
+    ],
+    "datePublished": "2026",
+    "keywords": ["off-road navigation", "runtime monitoring", "hazard detection", "survival analysis", "CUSUM", "learning from interventions"],
+    "isAccessibleForFree": true
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+
+  <!-- ====================== Hero ====================== -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation</h1>
+
+            <!-- personal links can be added as <a href="..." target="_blank">Name</a> -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Inuk Kang,</span>
+              <span class="author-block">Seung-Woo Seo</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Seoul National University, Republic of Korea</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Paper PDF (local copy; switch to the arXiv PDF once it is public) -->
+                <span class="link-block">
+                  <a href="static/pdf/cusp_paper.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- link the arXiv abstract page and remove "disabled" -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" disabled title="Coming soon">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- link the public code repository and remove "disabled" -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" disabled title="Coming soon">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="#video" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-video"></i></span>
+                    <span>Video</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Teaser (paper Fig. 1) ====================== -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <figure class="teaser-figure">
+          <a href="static/images/teaser.jpg" target="_blank">
+            <img src="static/images/teaser.jpg" width="1623" height="645" alt="The challenge this paper addresses: the autonomy model keeps proposing paths and raises no alarm; the human perceives the safe-to-danger transition (the onset) and takes over; CUSP learns this perception and its accumulated statistic crosses the threshold shortly after the onset.">
+          </a>
+          <figcaption>
+            <b>(Top)</b> The autonomy model keeps proposing candidate paths as the robot approaches a deteriorating
+            slope, and nothing in the stack raises an alarm.
+            <b>(Middle)</b> The human perceives the safe-to-dangerous transition, marked as the onset
+            <i>o<sub>i</sub></i> (red box), and takes over before failure.
+            <b>(Bottom)</b> CUSP learns this perception. It accumulates evidence of the transition over time and raises
+            an alarm once that evidence exceeds the threshold <i>h</i>, here shortly after the onset.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Abstract ====================== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Off-road navigation exposes a robot to terrain that can become hazardous to it as it drives.
+              Learning-based navigation uses safety supervision to choose which path to drive but provides no runtime
+              alarm when the robot following that path is heading into danger. Such an alarm must be learned from
+              field logs in which a human's intervention preempts the failure and the failure itself is therefore
+              never observed. The intervention marks only when the human reacted after the hazard had become evident,
+              and every reaction follows a judgment made earlier. That earlier judgment is what a runtime alarm must
+              detect, yet no prior intervention-supervised method has targeted it. To address this problem we introduce
+              <b>CUSP</b> (<b>CU</b>SUM-governed <b>S</b>urvival model of the <b>P</b>erception onset), a stack-agnostic
+              runtime hazard monitor that learns this moment from intervention-terminated logs. <i>"Cusp"</i> is a word
+              for the point at which one state is about to turn into another, and the moment we target is exactly such
+              a cusp: the point at which safe driving turns unsafe in a human's judgment. We call it the
+              <b>perception onset</b> and annotate it separately from the intervention. A visual hazard head is trained
+              on it with a discrete-time survival objective so that driving with and without an onset both supervise the
+              head, and a CUSUM accumulates the predicted onset risk into alarms. We evaluate CUSP at five unseen sites,
+              two autonomous and three teleoperated, with 142 events and every method tuned to the same rate of ten
+              false alarms per hour. CUSP detected 85 events compared to 26 for the best of nine adapted baselines, and
+              the margin comes from hazards to which every signal in the navigation model is blind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Method ====================== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+
+      <figure class="method-figure">
+        <a href="static/images/method.png" target="_blank">
+          <img src="static/images/method.png" width="1773" height="979" loading="lazy" alt="CUSP overview: (a) training with episode annotation, hazard-prediction head on frozen DINOv3 features with FiLM conditioning, survival targets and masks, and evidence-graded weights; (b) runtime hazard score, standardization, one-sided CUSUM and site commissioning.">
+        </a>
+        <figcaption>
+          <b>(a) Training.</b> Each episode is annotated with the perception onset <i>o<sub>i</sub></i> and the end
+          just before intervention. Frozen DINOv3 features are pooled over the committed-path corridor with temporal
+          differences and global context and FiLM-conditioned on path curvature and speed. Survival targets and masks
+          are anchored on <i>o<sub>i</sub></i>, and per-event weights <i>w<sub>i</sub></i> are graded by IMU tilt
+          around the onset (training only).
+          <b>(b) Runtime.</b> The onset-risk score is robust-standardized and accumulated by a one-sided CUSUM under a
+          per-site false-alarm budget.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ====================== Results ====================== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+
+      <div class="results-table-block">
+        <div class="table-container">
+          <table class="table is-hoverable results-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Detections / 142<br><span class="sub-head">(Sites I / II / III / IV / V)</span></th>
+                <th>Margin &gt; 0.5 / 1 / 2 s</th>
+                <th>C(+3)</th>
+                <th>Delay, median [IQR] (s)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="group-row"><td colspan="5">Obstacle proximity</td></tr>
+              <tr><td>NavDP</td><td>3 <span class="sub">(0/3/0/0/0)</span></td><td>3 / 2 / 2</td><td>0.014</td><td>+2.04 [1.8–5.7]</td></tr>
+              <tr><td>CARE</td><td>10 <span class="sub">(0/5/1/1/3)</span></td><td>10 / 10 / 10</td><td>0.021</td><td>+4.59 [1.7–5.7]</td></tr>
+
+              <tr class="group-row"><td colspan="5">Plan / policy-conditioned</td></tr>
+              <tr><td>LaND</td><td>12 <span class="sub">(0/0/3/3/6)</span></td><td>11 / 11 / 10</td><td>0.049</td><td>+2.58 [1.4–3.8]</td></tr>
+              <tr><td>FIPER</td><td>21 <span class="sub">(1/10/6/0/4)</span></td><td>19 / 16 / 12</td><td>0.028</td><td>+5.24 [3.2–8.4]</td></tr>
+              <tr><td>PAAD</td><td>26 <span class="sub">(0/14/3/1/8)</span></td><td>25 / 22 / 19</td><td>0.056</td><td>+5.13 [2.8–7.7]</td></tr>
+
+              <tr class="group-row"><td colspan="5">Traversability</td></tr>
+              <tr><td>STERLING</td><td>7 <span class="sub">(1/5/0/1/0)</span></td><td>7 / 6 / 5</td><td>0.000</td><td>+5.21 [4.4–6.0]</td></tr>
+              <tr><td>CAHSOR</td><td>9 <span class="sub">(2/6/1/0/0)</span></td><td>8 / 7 / 6</td><td>0.014</td><td>+5.60 [3.4–9.4]</td></tr>
+              <tr><td>SALON</td><td>24 <span class="sub">(0/20/2/2/0)</span></td><td>19 / 17 / 13</td><td>0.028</td><td>+4.69 [3.2–8.4]</td></tr>
+              <tr><td>WVN</td><td>26 <span class="sub">(1/16/2/3/4)</span></td><td>21 / 20 / 17</td><td>0.063</td><td>+5.00 [2.5–7.4]</td></tr>
+
+              <tr class="group-row"><td colspan="5">Ours</td></tr>
+              <tr class="is-ablation"><td>CUSP (intervention label)</td><td>34 <span class="sub">(3/17/8/4/2)</span></td><td>34 / 32 / 24</td><td>0.127</td><td>+2.91 [1.6–5.4]</td></tr>
+              <tr class="is-selected-ours"><td>CUSP (ours)</td><td>85 <span class="sub">(4/40/16/4/21)</span></td><td>77 / 72 / 64</td><td>0.218</td><td>+3.72 [1.9–6.5]</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-caption">
+          Five-site results under a common 10/h false-alarm budget (142 events: 11 / 50 / 28 / 13 / 40 at Sites I–V).
+          <b>Detections</b>: events with an alarm inside the perception-to-action window
+          [<i>o<sub>i</sub></i>, end]. <b>Margin</b>: detections whose alarm precedes the intervention by more than
+          0.5 / 1 / 2 s. <b>C(+3)</b>: fraction of all events alarmed within 3 s of the onset.
+          <b>Delay</b>: alarm time minus onset over detected events. Each baseline is reported at its best
+          configuration (CUSUM with <i>k</i> ∈ {1, 2, 3} or the instantaneous rule). Table II of the paper.
+        </p>
+      </div>
+
+      <figure class="wide-figure">
+        <a href="static/images/detections.jpg" target="_blank">
+          <img src="static/images/detections.jpg" width="1929" height="857" loading="lazy" alt="Example detections at Sites II, III and V: frames sampled around the onset and plots of the per-frame score and CUSUM statistic against time from onset, with the threshold, the perception-to-action window and the alarm time marked.">
+        </a>
+        <figcaption>
+          <b>Example detections at Sites II, III, and V.</b>
+          <b>(a)</b> Four vegetation intrusion events at Site II, where the path is visibly impassable and the
+          baselines also detect the events.
+          <b>(b)</b> Mounting a right cross-slope (Site V).
+          <b>(c)</b> Sliding into a downward right cross-slope (Site III).
+          <b>(d)</b> Entering a left cross-slope overgrown with dense bushes (Site III).
+          In (b)–(d) nothing in the view marks the path as impassable, and CUSP is the only method that alarms.
+          Each plot shows the score <i>s<sub>t</sub></i> (grey) and the CUSUM statistic <i>C<sub>t</sub></i> (blue)
+          against time from onset, with the threshold <i>h</i> as a dashed line, the perception-to-action window
+          [<i>o<sub>i</sub></i>, end] shaded in green, and the alarm time marked by the orange vertical line.
+          Frames above each plot are sampled at the indicated times from onset.
+        </figcaption>
+      </figure>
+
+      <figure class="medium-figure">
+        <a href="static/images/far_curve.png" target="_blank">
+          <img src="static/images/far_curve.png" width="1599" height="1027" alt="Detection rate against realized false-alarm rate on the teleoperated Sites III–V as the threshold varies; CUSP dominates every baseline at every budget, and the dashed line marks the 10/h operating point.">
+        </a>
+        <figcaption>
+          <b>Detection rate against realized false-alarm rate on Sites III–V</b> as the threshold <i>h</i> varies.
+          The dashed line marks the 10/h operating point. The lead holds at every budget: the detection rate the best
+          baseline reaches at 10/h, CUSP reaches at under 3/h, and the 0.30 the best baseline reaches at 30/h, CUSP
+          reaches at 6/h.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ====================== Real-world Experiments ====================== -->
+  <section class="section" id="video">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Real-world Experiments</h2>
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              Alarm examples from the held-out sites, grouped by site. Each clip shows the left ZED 2i image with the
+              committed path, the per-frame score <i>s<sub>t</sub></i> and the CUSUM statistic <i>C<sub>t</sub></i>
+              against the threshold <i>h</i>, the onset and the intervention, and the alarm times of CUSP and the three
+              strongest baselines (PAAD, WVN, SALON). Site II is driven autonomously by NoMaD with CUSP attached as an
+              alarm; Sites III–V are teleoperated.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-grid">
+        <figure>
+          <video autoplay muted loop playsinline controls preload="metadata" poster="static/images/poster_site2.jpg" width="1280" height="720">
+            <source src="static/videos/site2.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <b>Site II</b> (autonomous). A fallen tree lying across the path, a steep downward slope on the left,
+            an upward slope that turns into a hill, and a longitudinal pit with a slope on the right.
+          </figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline controls preload="metadata" poster="static/images/poster_site3.jpg" width="1280" height="720">
+            <source src="static/videos/site3.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <b>Site III</b> (teleoperated). A right cross-slope with a tree directly ahead (shown at 2×), and a left
+            cross-slope that ends at a tree.
+          </figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline controls preload="metadata" poster="static/images/poster_site4.jpg" width="1280" height="720">
+            <source src="static/videos/site4.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <b>Site IV</b> (teleoperated). Leaving a stone-paved path into vegetation and rocks, and tall grass closing
+            in on the right while following the paved path.
+          </figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline controls preload="metadata" poster="static/images/poster_site5.jpg" width="1280" height="720">
+            <source src="static/videos/site5.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <b>Site V</b> (teleoperated). A pile of logs and a tree on the left, a hill with a slope and vegetation on
+            the right, a mound on the right, and three downward slopes on the left, one of them with a log.
+          </figcaption>
+        </figure>
+        <figure class="is-centered-half">
+          <video autoplay muted loop playsinline controls preload="metadata" poster="static/images/poster_missed.jpg" width="1280" height="720">
+            <source src="static/videos/missed.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <b>Missed cases</b> (Site III). Two events where <i>C<sub>t</sub></i> never reaches <i>h</i>: an approach
+            into dense bushes that the head scores no differently from traversable ground, and a traverse along the
+            left upper slope that looks like nominal driving.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== BibTeX ====================== -->
+  <section class="section hero is-light" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{kang2026cusp,
+  title   = {CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation},
+  author  = {Kang, Inuk and Seo, Seung-Woo},
+  year    = {2026}
+}</code></pre>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
