@@ -61,7 +61,7 @@ body {
 .button.is-dark:active { transform: translateY(0); box-shadow: var(--shadow-md); }
 .button.is-dark[disabled] { opacity: 0.55; cursor: not-allowed; }
 .button.is-dark[disabled]:hover { transform: none; background: var(--text-primary) !important; box-shadow: var(--shadow-md); }
-.link-block a { margin: 8px 4px; }
+.link-block .button { margin: 8px 4px; }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; overflow: hidden; }

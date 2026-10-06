@@ -12,13 +12,13 @@
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
 
-  <!-- Open Graph / Facebook  (replace the URL with the final GitHub Pages URL) -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="CUSP">
   <meta property="og:title" content="CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation">
   <meta property="og:description" content="A stack-agnostic runtime hazard monitor that learns the human-perceived onset of danger from intervention-terminated logs and raises CUSUM-governed alarms. 85 of 142 events detected at five unseen sites vs. 26 for the best of nine baselines.">
-  <meta property="og:url" content="https://USERNAME.github.io/cusp-project/">
-  <meta property="og:image" content="https://USERNAME.github.io/cusp-project/static/images/social_preview.jpg">
+  <meta property="og:url" content="https://in-uk.github.io/cusp-project/">
+  <meta property="og:image" content="https://in-uk.github.io/cusp-project/static/images/social_preview.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CUSP - Research Preview">
@@ -27,7 +27,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation">
   <meta name="twitter:description" content="A stack-agnostic runtime hazard monitor that learns the human-perceived onset of danger from intervention-terminated logs and raises CUSUM-governed alarms.">
-  <meta name="twitter:image" content="https://USERNAME.github.io/cusp-project/static/images/social_preview.jpg">
+  <meta name="twitter:image" content="https://in-uk.github.io/cusp-project/static/images/social_preview.jpg">
 
   <!-- Academic -->
   <meta name="citation_title" content="CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation">
@@ -95,6 +95,8 @@
               <span class="author-block">Seoul National University, Republic of Korea</span>
             </div>
 
+            <div class="publication-venue">arXiv preprint (2026)</div>
+
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- Paper PDF (local copy; switch to the arXiv PDF once it is public) -->
@@ -105,12 +107,12 @@
                   </a>
                 </span>
 
-                <!-- link the arXiv abstract page and remove "disabled" -->
+                <!-- Replace this pending button with the public arXiv abstract link after announcement. -->
                 <span class="link-block">
-                  <a href="#" class="external-link button is-normal is-rounded is-dark" disabled title="Coming soon">
+                  <button type="button" class="external-link button is-normal is-rounded is-dark" disabled aria-describedby="arxiv-status" title="Submitted to arXiv; public link pending.">
                     <span class="icon"><i class="ai ai-arxiv"></i></span>
-                    <span>arXiv</span>
-                  </a>
+                    <span>arXiv (pending)</span>
+                  </button>
                 </span>
 
                 <!-- link the public code repository and remove "disabled" -->
@@ -128,6 +130,7 @@
                   </a>
                 </span>
               </div>
+              <p id="arxiv-status" class="is-size-7 has-text-grey">Submitted to arXiv; public link pending.</p>
             </div>
           </div>
         </div>
@@ -164,23 +167,23 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Off-road navigation exposes a robot to terrain that can become hazardous to it as it drives.
-              Learning-based navigation uses safety supervision to choose which path to drive but provides no runtime
-              alarm when the robot following that path is heading into danger. Such an alarm must be learned from
-              field logs in which a human's intervention preempts the failure and the failure itself is therefore
-              never observed. The intervention marks only when the human reacted after the hazard had become evident,
-              and every reaction follows a judgment made earlier. That earlier judgment is what a runtime alarm must
-              detect, yet no prior intervention-supervised method has targeted it. To address this problem we introduce
-              <b>CUSP</b> (<b>CU</b>SUM-governed <b>S</b>urvival model of the <b>P</b>erception onset), a stack-agnostic
-              runtime hazard monitor that learns this moment from intervention-terminated logs. <i>"Cusp"</i> is a word
+              Off-road navigation exposes a robot to potentially hazardous terrain en route. Although learning-based
+              navigation uses safety supervision to choose which path to drive, it provides no runtime alarm when the
+              robot following that path is heading into danger. Such an alarm must be learned from field logs, where
+              human intervention preempts the failure and the failure itself is therefore never observed. The human
+              judges driving unsafe early but typically intervenes only once failure is clearly near, so the
+              intervention marks that judgment late. That earlier judgment is what a runtime alarm must detect, yet
+              no prior intervention-supervised method has targeted it. To address this problem, we introduce
+              <b>CUSP</b> (<b>CU</b>SUM-governed <b>S</b>urvival model of the <b>P</b>erception onset), a model-agnostic
+              runtime hazard alarm that learns this moment from intervention-terminated logs. <i>"Cusp"</i> is a word
               for the point at which one state is about to turn into another, and the moment we target is exactly such
-              a cusp: the point at which safe driving turns unsafe in a human's judgment. We call it the
+              a cusp: the point at which safe driving turns unsafe in a human's judgment. We call this point the
               <b>perception onset</b> and annotate it separately from the intervention. A visual hazard head is trained
-              on it with a discrete-time survival objective so that driving with and without an onset both supervise the
-              head, and a CUSUM accumulates the predicted onset risk into alarms. We evaluate CUSP at five unseen sites,
-              two autonomous and three teleoperated, with 142 events and every method tuned to the same rate of ten
-              false alarms per hour. CUSP detected 85 events compared to 26 for the best of nine adapted baselines, and
-              the margin comes from hazards to which every signal in the navigation model is blind.
+              on the annotated onset with a discrete-time survival objective so that driving with and without an onset
+              both supervise the head, and a CUSUM accumulates the predicted onset risk into alarms. We evaluate CUSP
+              at five unseen sites, two autonomous and three teleoperated, with 142 events and every method tuned to
+              the same rate of ten false alarms per hour. CUSP detected 85 events compared to 26 for the best of nine
+              adapted baselines, and the margin comes from hazards to which every signal in the navigation model is blind.
             </p>
           </div>
         </div>
@@ -375,6 +378,7 @@
       <pre id="bibtex-code"><code>@article{kang2026cusp,
   title   = {CUSP: CUSUM-Governed Survival Hazard Alarms at the Perception Onset for Off-Road Navigation},
   author  = {Kang, Inuk and Seo, Seung-Woo},
+  journal = {arXiv preprint},
   year    = {2026}
 }</code></pre>
     </div>
